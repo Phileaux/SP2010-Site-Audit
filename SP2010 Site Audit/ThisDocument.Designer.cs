@@ -39,13 +39,19 @@ namespace SP2010_Site_Audit {
         
         internal Microsoft.Office.Tools.Word.ComboBoxContentControl comboBoxContentControl1;
         
+        internal Microsoft.Office.Tools.Word.PlainTextContentControl txtDateGenerated;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl2;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcURLError;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         internal Microsoft.Office.Interop.Word.Application ThisApplication;
         
-        internal Microsoft.Office.Tools.Word.Controls.Button button1;
+        internal Microsoft.Office.Tools.Word.Controls.Button btnLoadForm;
         
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -154,6 +160,9 @@ namespace SP2010_Site_Audit {
             this.datePickerContentControl3.BeginInit();
             this.plainTextContentControl6.BeginInit();
             this.comboBoxContentControl1.BeginInit();
+            this.txtDateGenerated.BeginInit();
+            this.richTextContentControl2.BeginInit();
+            this.rtcURLError.BeginInit();
         }
         
         /// 
@@ -161,6 +170,9 @@ namespace SP2010_Site_Audit {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcURLError.EndInit();
+            this.richTextContentControl2.EndInit();
+            this.txtDateGenerated.EndInit();
             this.comboBoxContentControl1.EndInit();
             this.plainTextContentControl6.EndInit();
             this.datePickerContentControl3.EndInit();
@@ -191,7 +203,10 @@ namespace SP2010_Site_Audit {
             this.datePickerContentControl3 = Globals.Factory.CreateDatePickerContentControl(null, null, "466545896", "datePickerContentControl3", this);
             this.plainTextContentControl6 = Globals.Factory.CreatePlainTextContentControl(null, null, "422618044", "plainTextContentControl6", this);
             this.comboBoxContentControl1 = Globals.Factory.CreateComboBoxContentControl(null, null, "2773197040", "comboBoxContentControl1", this);
-            this.button1 = new Microsoft.Office.Tools.Word.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "00DC4270A095F804C6D082100C29539A5F8B70", "00DC4270A095F804C6D082100C29539A5F8B70", this, "button1");
+            this.txtDateGenerated = Globals.Factory.CreatePlainTextContentControl(null, null, "3325695776", "txtDateGenerated", this);
+            this.richTextContentControl2 = Globals.Factory.CreateRichTextContentControl(null, null, "2601207849", "richTextContentControl2", this);
+            this.rtcURLError = Globals.Factory.CreateRichTextContentControl(null, null, "3406010870", "rtcURLError", this);
+            this.btnLoadForm = new Microsoft.Office.Tools.Word.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "00DC4270A095F804C6D082100C29539A5F8B70", "00DC4270A095F804C6D082100C29539A5F8B70", this, "btnLoadForm");
         }
         
         /// 
@@ -245,17 +260,29 @@ namespace SP2010_Site_Audit {
             // 
             this.comboBoxContentControl1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // button1
+            // btnLoadForm
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Name = "button1";
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLoadForm.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLoadForm.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLoadForm.Name = "btnLoadForm";
+            this.btnLoadForm.Text = "Load";
+            this.btnLoadForm.UseVisualStyleBackColor = false;
+            // 
+            // txtDateGenerated
+            // 
+            this.txtDateGenerated.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl2
+            // 
+            this.richTextContentControl2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcURLError
+            // 
+            this.rtcURLError.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // ThisDocument
             // 
-            this.button1.BindingContext = this.BindingContext;
+            this.btnLoadForm.BindingContext = this.BindingContext;
         }
         
         /// 
@@ -270,6 +297,9 @@ namespace SP2010_Site_Audit {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcURLError.Dispose();
+            this.richTextContentControl2.Dispose();
+            this.txtDateGenerated.Dispose();
             this.comboBoxContentControl1.Dispose();
             this.plainTextContentControl6.Dispose();
             this.datePickerContentControl3.Dispose();
